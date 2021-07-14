@@ -15,7 +15,7 @@ class CreateEquationsTable extends Migration
     {
         Schema::create('equations', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->integer("users_id");
+            $table->ipAddress("ipAddress");//->unique();
             $table->string("equation")->nullable();
             $table->timestamps();
         });
