@@ -3,10 +3,17 @@
 namespace App;
 
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class User extends Model
 {
-    public function equations(){
-        return $this->hasMany(Equation::class);
-    }
+    use SoftDeletes;
+    protected $fillable = [
+        'ipAddress',
+        'equation',
+    ];
+    //public function equations(){
+    //    return $this->hasMany(Equation::class);
+    //}
 }
