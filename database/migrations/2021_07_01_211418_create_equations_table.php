@@ -19,7 +19,7 @@ class CreateEquationsTable extends Migration
             $table->unsignedBigInteger('user_id');
             $table->foreign('user_id')->references('id')->on('users');
             
-            $table->ipAddress("ipAddress");//->unique();
+            //$table->ipAddress("ipAddress");//->unique();
             $table->string("equation")->nullable();
             $table->timestamps();
         });
