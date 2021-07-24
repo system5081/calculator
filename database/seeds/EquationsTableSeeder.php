@@ -13,7 +13,7 @@ class EquationsTableSeeder extends Seeder
     public function run()
     {
         $param=[
-            "users_id"=>1,
+            "user_id"=>1,
             "equation"=>"1+1",
             
             ];

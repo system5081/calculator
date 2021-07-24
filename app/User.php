@@ -13,7 +13,7 @@ class User extends Model
         'ipAddress',
         'equation',
     ];
-    //public function equations(){
-    //    return $this->hasMany(Equation::class);
-    //}
+    public function equations(){
+        return $this->hasMany(Equation::class,"user_id","ipAddress");
+    }
 }
