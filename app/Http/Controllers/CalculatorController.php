@@ -11,8 +11,12 @@ class CalculatorController extends Controller
      public function store(Request $request){
         $user=new User();
         $user->ipAddress=$request->ip();
-        $user->equation=$request->equation;
+        //$user->equation=$request->equation;
         $user->save();
+        
+        $equation=new Equation();
+        $equation->ipAddress=$request->ip();
+        $equation->$request->equation;
         }
      //public function retu(Request $request){
        // return "test";
