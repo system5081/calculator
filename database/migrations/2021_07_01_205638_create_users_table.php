@@ -15,7 +15,7 @@ class CreateUsersTable extends Migration
     {
         Schema::create('users', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->ipAddress("ipAddress")->unique();
+            $table->ipAddress("ipAddress");
             //$table->string("equation")->nullable();
             $table->timestamps();
         });

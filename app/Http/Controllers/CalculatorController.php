@@ -9,14 +9,17 @@ use App\Equation;
 class CalculatorController extends Controller
 {
      public function store(Request $request){
+        //dd($request);
         $user=new User();
         $user->ipAddress=$request->ip();
         //$user->equation=$request->equation;
         $user->save();
         
         $equation=new Equation();
-        $equation->ipAddress=$request->ip();
-        $equation->$request->equation;
+        //dd($equation);
+        $equation->user_id=$user->id;
+        $equation->equation=$request->equ;
+        $equation->save();
         }
      //public function retu(Request $request){
        // return "test";

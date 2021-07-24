@@ -447,7 +447,7 @@ $("#clear").click(function () {
     //
     //dataType: "json",
     data: {
-      equation: total,
+      equ: total,
     },
 
   })
@@ -480,13 +480,13 @@ $("#equal_btn").click(function () {
     //
     //dataType: "json",
     data: {
-      equation: total,
+      equ: total,
     },
 
   })
     //通信が成功したとき
     .then((res) => {
-      console.log(res);
+      console.log("test");
     })
     //通信が失敗したとき
     .fail((error) => {
