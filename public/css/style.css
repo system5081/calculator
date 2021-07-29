@@ -6,7 +6,7 @@
     border: 2px solid black;
   }
   
-  .output {
+.output {
     width: 400px;
     height: 100px;
     line-height: 50px;
@@ -18,16 +18,16 @@
     display:none;
   }
   
-  .output.active {
+.output.active {
     display:block;
   } 
   
-  .input1,.input2 {
+.input1,.input2 {
     width:400px;
     border: 2px solid black; 
   }
 
-  .row {
+.row {
     display: flex;
     justify-content: space-between;
     border: 2px solid /*red*/;
@@ -35,7 +35,7 @@
   }
   /*rowの範囲がわかりやすいように赤の枠を作っています。*/
   
-  .num_bth, #clear, #equal_btn,.setting,.const,.funct,.conte,.set{
+.num_bth, #clear, #equal_btn,.setting,.const,.funct,.conte,.set{
     width: 120px;
     height: 60px;
     text-align: center;
@@ -70,4 +70,3 @@
       border: 2px solid #006DD9;/* ボックスの境界線を実線で指定する */
       border-radius: 5px; /* 角丸を指定する */
     }
-    

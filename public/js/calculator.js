@@ -508,3 +508,74 @@ $("#equal_btn").click(function () {
   changeOutput()//計算結果・計算過程画面の入れ替える
 });
 //---------------------------------------------------------------------------------------------------
+//戻るボタンが押された時
+$("#retu").click(function () {
+  $.ajaxSetup({
+  headers: {
+    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+  },
+});
+/*global $*/
+  $.ajax({
+    //POST通信
+    type: "post",
+    //ここでデータの送信先URLを指定します。
+    url: "/retur",
+    //
+    //dataType: "json",
+    data: {
+      equ: total,
+    },
+
+  })
+    //通信が成功したとき
+    .then((res) => {
+      console.log("test");
+    })
+    //通信が失敗したとき
+    .fail((error) => {
+      console.log(error.statusText);
+    });
+  //=機能
+  console.log("cl");
+  
+  //cookie関連
+  var cookies=document.cookie;
+  console.log(cookies);
+});
+//---------------------------------------------------------------------------------------------------
+//進むボタンが押された時
+$("#next").click(function () {
+  $.ajaxSetup({
+  headers: {
+    "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+  },
+});
+/*global $*/
+  $.ajax({
+    //POST通信
+    type: "post",
+    //ここでデータの送信先URLを指定します。
+    url: "/nex",
+    //
+    //dataType: "json",
+    data: {
+      equ: total,
+    },
+
+  })
+    //通信が成功したとき
+    .then((res) => {
+      console.log("test");
+    })
+    //通信が失敗したとき
+    .fail((error) => {
+      console.log(error.statusText);
+    });
+  //=機能
+  console.log("cl");
+});
+//----------------------------------------------------------------------------------------------------
+//cookieについて
+var cookies=document.cookie;
+console.log(cookies);

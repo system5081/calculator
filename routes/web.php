@@ -1,5 +1,4 @@
 <?php
-
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,10 +10,12 @@
 |
 */
 
-Route::get('/', function () {
-    //return view('welcome');
-    return view("calculator");
-});
-Route::post('/user', 'CalculatorController@store');
-Route::get("/retu","CalculatorController@retu");
-Route::get("/next","CalculatorController@next");
+Route::get('/','CalculatorController@view');
+    //return view("calculator");
+//});
+Route::post('/user', 'CalculatorController@store_users');
+Route::post('/user','CalculatorController@store_equations');
+Route::post('/retur','CalculatorController@retur');
+Route::post('/retur','CalculatorController@store_equations');
+Route::post('/nex','CalculatorController@nex');
+Route::post('/nex','CalculatorController@store_equations');
