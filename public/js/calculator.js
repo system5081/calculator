@@ -508,3 +508,34 @@ $("#equal_btn").click(function () {
   changeOutput()//計算結果・計算過程画面の入れ替える
 });
 //---------------------------------------------------------------------------------------------------
+//「戻る」が押された時
+$("#retu").click(function() {
+    $.ajaxSetup({
+    headers: {
+      "X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr("content"),
+    },
+  });
+/*global $*/
+  $.ajax({
+    //POST通信
+    type: "post",
+    //ここでデータの送信先URLを指定します。
+    url: "/retu",
+    //url:"/retu2",
+    //
+    //dataType: "json",
+    data: {
+      equation: total,
+    },
+  })
+    //通信が成功したとき
+    .then((res) => {
+      console.log(res);
+    })
+    //通信が失敗したとき
+    .fail((error) => {
+      console.log(error.statusText);
+    });
+  //=機能
+  
+})

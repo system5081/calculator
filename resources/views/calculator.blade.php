@@ -115,9 +115,10 @@
       </div>
     </div>
     <section class="return">
-      <div class="transfar" id="return">戻る</div>
-      <div class="transfar" id="return">進む</div>
+      <div class="transfar" id="retu">戻る</div>
+      <div class="transfar" id="adva">進む</div>
     </section>
+    
    <!--<form action="/retu" method="POST"><button type="submit" id="efgh" name="retu">戻る</button></form>
     <form action="/next" method="POST"><button type="button" id="efgh">進む</form>-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

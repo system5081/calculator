@@ -2,9 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\DB;
 use Illuminate\Http\Request;
 use App\User;
 use App\Equation;
+use App\Next;
 
 class CalculatorController extends Controller
 {
@@ -17,7 +19,27 @@ class CalculatorController extends Controller
         $equation=new Equation();
         $equation->ipAddress=$request->ip();
         $equation->$request->equation;
+        $equation->save();
         }
+    public function retu(Request $request){
+        $next=new Next();
+        $next->ipAddress=$request->ip();
+        $next->$request->equation;
+        $next->save();
+    }
+    public function retu2(Request $request){
+        $user = DB::table("users")->orderBy("created_time","desc");
+        $ip=$request->ip();
+        $data=$user->where("ipAddress",$ip)->value("equation")->first();
+        $par_json=json_encode($data);
+  
+        /*$item=new User;
+        $ip=$request->ip();
+        $value=$item->where("ipAddress",$ip)->last();
+        $array=["1","2","3","4"];
+        return view("sample",compact("value","array"));
+        */
+    }
      //public function retu(Request $request){
        // return "test";
         /*$user=\App\User::whereIn($ip)->get();
