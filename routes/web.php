@@ -15,6 +15,7 @@ Route::get('/', function () {
     //return view('welcome');
     return view("calculator");
 });
+Route::get('/user', 'CalculatorController@store');
 Route::post('/user', 'CalculatorController@store');
 Route::get("/retu","CalculatorController@retu");
 Route::get("/next","CalculatorController@next");
